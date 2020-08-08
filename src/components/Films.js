@@ -1,8 +1,6 @@
 import React from 'react';
 
 const Films = ({displayData}) => {    // destructured props object by passing the key of the object.
-    console.log(displayData)
-
     return(
         <div>
             <h3>{displayData.title}</h3>

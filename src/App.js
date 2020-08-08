@@ -12,16 +12,11 @@ import Starships from './components/Starships';
 import Vehicles from './components/Vehicles';
 import Error from './components/Error';
 
-
 function App() {
 
   const [displayData, setDisplayData] = useState('');
-  // const [selected, setSelected] = useState('');
-  // const [number, setNumber] = useState('');
 
   const handleClick = (selected, number) => {
-    // setSelected(selected);
-    // setNumber(number);
     axios.get(`http://swapi.dev/api/${selected}/${number}`)
       .then(response => {
         setDisplayData(response.data);
