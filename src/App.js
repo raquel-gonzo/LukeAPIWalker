@@ -24,7 +24,7 @@ function App() {
     // setNumber(number);
     axios.get(`http://swapi.dev/api/${selected}/${number}`)
       .then(response => {
-        setDisplayData(response);
+        setDisplayData(response.data);
         navigate(`/${selected}/${number}`);
       }).catch(err => {
         console.log("error " + err);
