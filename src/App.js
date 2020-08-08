@@ -1,6 +1,6 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import { Router, navigate} from '@reach/router';
+import { Router, navigate } from '@reach/router';
 import axios from 'axios';
 
 import Searchbar from './components/Searchbar';
@@ -31,12 +31,12 @@ function App() {
     <div className="App">
       <Searchbar handleClick={handleClick} />
       <Router>
-        <Films path="/films/:number" displayData={displayData}/>
-        <People path="/people/:number" displayData={displayData}/>
-        <Planets path="/planets/:number" displayData={displayData}/>
-        <Species path="/species/:number" displayData={displayData}/>
-        <Starships path="/starships/:number" displayData={displayData}/>
-        <Vehicles path="/vehicles/:number" displayData={displayData}/>
+        <Films path="/films/:number" displayData={displayData} />
+        <People path="/people/:number" displayData={displayData} />
+        <Planets path="/planets/:number" displayData={displayData} />
+        <Species path="/species/:number" displayData={displayData} />
+        <Starships path="/starships/:number" displayData={displayData} />
+        <Vehicles path="/vehicles/:number" displayData={displayData} />
         <Error path="/error" />
       </Router>
     </div>
