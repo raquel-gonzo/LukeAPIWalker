@@ -8,7 +8,7 @@ const Searchbar = (props) => {
         setSelected(event.target.value.toLowerCase())
     }
 
-    const [number, setNumber] = useState(0);
+    const [number, setNumber] = useState(1);
     const handleNumber = (e) => {
         setNumber(e.target.value)
     }
@@ -17,7 +17,7 @@ const Searchbar = (props) => {
         <div>
             <label>Search for: </label>
             <select id="select" name="select" onChange={handleSelect}>
-                <option>Films</option>
+                <option>Films</option>  
                 <option>People</option>
                 <option>Planets</option>
                 <option>Species</option>
@@ -29,7 +29,6 @@ const Searchbar = (props) => {
             <input type="number" value={number} onChange={handleNumber}></input>
 
             <button onClick={() => props.handleClick(selected, number)}>Search</button>
-
         </div>
     );
 };
